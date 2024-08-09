@@ -53,12 +53,9 @@ ggplot() +
   coord_sf(crs = ortho) +
   theme_void() -> cn
 
-ggsave(filename = './cn.jpg',plot = cn,
+ggsave(filename = './cn.png',plot = cn,
        dpi = 120,bg = 'transparent',
        width = 3.2,height = 3.2)
-
-# make cn.jpg background transparent
-# https://uutool.cn/img-matting/
 
 library(showtext)
 showtext_auto(enable = TRUE)
@@ -67,16 +64,16 @@ library(hexSticker)
 library(magick)
 
 sticker(
-  subplot = "./cn.jpg",
+  subplot = "./cn.png",
   s_x = .995,
   s_y = .965,
-  s_width = .6,
-  s_height = .6,
+  s_width = .75,
+  s_height = .75,
   package = "geocn",
   p_family = "ShineTypewriter",
   p_size = 25,
   p_color = ggplot2::alpha("#3e3221",.9),
-  p_x = 1.03,
+  p_x = 1.02,
   p_y = 0.97,
   dpi = 300,
   asp = 1,
