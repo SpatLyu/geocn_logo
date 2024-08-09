@@ -40,9 +40,9 @@ world = load_world_coastline() |>
   st_intersection(circle)
 
 ggplot() +
-  geom_sf(data = circle,colour="black",fill="grey95") +
+  geom_sf(data = circle,colour="black",fill="transparent") +
   geom_sf(data = world,fill="grey80",colour="grey80") +
-  geom_sf(data = province,fill="white",size=.1,color="grey") + 
+  geom_sf(data = province,fill = "transparent",size=.1,color="grey") + 
   geom_sf(data = cn_border,size = 1.2,color="red") +
   ggfx::with_outer_glow(geom_sf(data = cn_border,
                                 lwd = .3,
@@ -55,7 +55,10 @@ ggplot() +
 
 ggsave(filename = './cn.jpg',plot = cn,
        dpi = 120,bg = 'transparent',
-       width = 3.4,height = 3.4)
+       width = 3.2,height = 3.2)
+
+# make cn.jpg background transparent
+# https://uutool.cn/img-matting/
 
 library(showtext)
 showtext_auto(enable = TRUE)
@@ -65,10 +68,10 @@ library(magick)
 
 sticker(
   subplot = "./cn.jpg",
-  s_x = .98,
-  s_y = .96,
-  s_width = .765,
-  s_height = .765,
+  s_x = .985,
+  s_y = .965,
+  s_width = .6,
+  s_height = .6,
   package = "geocn",
   p_family = "ShineTypewriter",
   p_size = 25,
@@ -78,9 +81,9 @@ sticker(
   dpi = 300,
   asp = 1,
   h_size = 1.25,
-  h_color = ggplot2::alpha("#3e3221",.5),
+  h_color = ggplot2::alpha("#3e3221",1),
   h_fill = '#ffffff',
-  white_around_sticker = T,
+  white_around_sticker = F,
   filename = "geocn_logo.png"
 )
 
