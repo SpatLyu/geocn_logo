@@ -54,7 +54,7 @@ library(magick)
 
 sticker(
   subplot = "./cn.jpg",
-  s_x = .985,
+  s_x = .995,
   s_y = .965,
   s_width = .6,
   s_height = .6,
