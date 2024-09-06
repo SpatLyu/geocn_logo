@@ -67,6 +67,9 @@ sticker(
   h_color = ggplot2::alpha("#3e3221",1),
   h_fill = '#ffffff',
   white_around_sticker = F,
+  url = "https://stscl.github.io/geocn",
+  u_color = ggplot2::alpha("#3e3221",1),
+  u_size = 5.45,
   filename = "geocn_logo.png"
 )
 
