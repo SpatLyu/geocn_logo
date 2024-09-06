@@ -66,7 +66,7 @@ library(magick)
 sticker(
   subplot = "./cn.png",
   s_x = .995,
-  s_y = .965,
+  s_y = 1.02,
   s_width = .75,
   s_height = .75,
   package = "geocn",
