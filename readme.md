@@ -60,7 +60,7 @@ sticker(
   p_size = 25,
   p_color = ggplot2::alpha("#3e3221",.9),
   p_x = 1.02,
-  p_y = 0.97,
+  p_y = 1.01,
   dpi = 300,
   asp = 1,
   h_size = 1.25,
