@@ -63,8 +63,8 @@ sticker(
   p_y = 1.01,
   dpi = 300,
   asp = 1,
-  h_size = 1.25,
-  h_color = ggplot2::alpha("#3e3221",1),
+  h_size = 1.55,
+  h_color = ggplot2::alpha("#3e3221",.75),
   h_fill = '#ffffff',
   white_around_sticker = F,
   url = "https://stscl.github.io/geocn",
@@ -74,7 +74,7 @@ sticker(
 )
 
 image_read('./geocn_logo.png') |> 
-  image_resize("256x256")|> 
+  image_resize("240x278")|> 
   image_write('./geocn_logo.png')
 ```
 
